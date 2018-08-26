@@ -13,4 +13,9 @@
 
 <h2>Comments</h2>
 <%= render @article.comments %>
-<%= link_to 'back to index', root_path%>
+
+<h2>Add a comment:</h2>
+<%= render 'admin/comments/form' %>
+
+<%= link_to 'Edit', edit_admin_article_path(@article) %> |
+<%= link_to 'Back', admin_articles_path %>

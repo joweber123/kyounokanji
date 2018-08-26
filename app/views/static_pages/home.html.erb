@@ -3,4 +3,19 @@
 <p>We hope our learning can be your learning as well</p>
 
 
-<%= link_to 'New article', new_article_path %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th></th>
+  </tr>
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.correction %></td>
+      <td><%= link_to 'Show', article_path(article) %></td>
+
+
+    </tr>
+  <% end %>
+</table>
